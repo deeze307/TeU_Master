@@ -10,7 +10,7 @@ declare const facebookConnectPlugin: any;
 export class HomePage {
   drawerOptions: any;
 
-  public backgroundImage = "assets/img/background/faro-dark.jpg";
+  public backgroundImage = "assets/img/background/BG_TeU.jpg";
   constructor(public navCtrl: NavController) {
     this.drawerOptions = {
       handleHeight: 50,
