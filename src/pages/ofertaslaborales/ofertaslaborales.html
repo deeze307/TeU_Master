@@ -19,23 +19,25 @@
     </ion-card-content>
     <ion-row no-padding>
       <ion-col>
-        <button ion-button clear small color="danger" icon-left (click)="favorite(card)">
-          <ion-icon name='star'></ion-icon>
-          Favorite
-        </button>
+        <!--<button ion-button clear small color="danger" icon-left (click)="favorite(card)">-->
+          <!--<ion-icon name='time'></ion-icon>-->
+          <!--Favorite-->
+        <!--</button>-->
+        <ion-fab right bottom>
+          <button ion-fab color="light"><ion-icon name="share-alt"></ion-icon></button>
+          <ion-fab-list side="left">
+            <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+            <button ion-fab><ion-icon name="mail"></ion-icon></button>
+          </ion-fab-list>
+        </ion-fab>
       </ion-col>
-      <ion-col text-center>
-        <button ion-button clear small color="danger" icon-left (click)="listen(card)">
-          <ion-icon name='musical-notes'></ion-icon>
-          Listen
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-left (click)="share(card)">
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col>
+      <!--<ion-col text-right>-->
+        <!--<button ion-button clear small color="info" icon-left (click)="share(card)">-->
+          <!--<ion-icon name='share-alt'></ion-icon>-->
+          <!--Compartir-->
+        <!--</button>-->
+      <!--</ion-col>-->
     </ion-row>
   </ion-card>
 

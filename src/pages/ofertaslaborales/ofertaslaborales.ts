@@ -8,33 +8,28 @@ import { NavController } from 'ionic-angular';
 export class OfertasLaborales {
   cards = [
     {
-      imageUrl: 'assets/img/card/nin-live.png',
-      title: 'Nine Inch Nails Live',
-      description: 'The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.'
+      imageUrl: 'assets/img/card/TeU2.jpg',
+      title: '#EmpleosTeU',
+      description: 'Administrativo Contable'
     },
     {
-      imageUrl: 'assets/img/card/badu-live.png',
-      title: 'Erykah Badu',
-      description: 'American singer-songwriter, record producer, activist, and actress, Badu\'s style is a prime example of neo-soul.'
+      imageUrl: 'assets/img/card/TeU3.jpg',
+      title: '#EmpleosTeU',
+      description: 'Profesor de Inglés'
     },
     {
-      imageUrl: 'assets/img/card/queen-live.png',
-      title: 'Queen',
-      description: 'The British rock band formed in London in 1970, and is considered one of the biggest stadium rock bands in the world.'
+      imageUrl: 'assets/img/card/TeU4.jpg',
+      title: '#EmpleosTeU',
+      description: 'Vendedor / Distribuidor'
     },
     {
-      imageUrl: 'assets/img/card/bjork-live.jpg',
-      title: 'Björk',
-      description: 'Björk is an Icelandic singer, songwriter and actress.'
-    },
-    {
-      imageUrl: 'assets/img/card/rundmc-live.png',
-      title: 'Run-D.M.C.',
-      description: 'The American hip hop group widely acknowledged as one of the most influential acts in the history of hip hop.'
+      imageUrl: 'assets/img/card/TeU5.jpg',
+      title: '#EmpleosTeU',
+      description: 'Secretaria Administrativa'
     },];
 
   drawerOptions: any;
-  public backgroundImage = "assets/img/background/faro-dark.jpg";
+  public backgroundImage = "assets/img/background/BG_TeU.jpg";
   constructor(public navCtrl: NavController) {
     this.drawerOptions = {
       handleHeight: 50,
