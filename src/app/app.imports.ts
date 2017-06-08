@@ -64,8 +64,13 @@ import { ContactPage} from '../pages/contact/contact';
 
 import { AboutPage } from '../pages/about/about';
 
-//
-import { OfertasLaborales} from '../pages/ofertaslaborales/ofertaslaborales';
+// Ofertas Laborales
+
+import { OfertasLaborales } from '../pages/ofertaslaborales/ofertaslaborales';
+
+// Consejos
+
+import { Consejos } from '../pages/consejos/pages';
 
 // Slides
 import { SlidesPage } from '../pages/slide/slide';
@@ -144,7 +149,7 @@ export const Modules = [
     SwingModule,
     BrowserModule,
     HttpModule,
-]
+];
 
 export const Pages = [
     // Home
@@ -178,6 +183,9 @@ export const Pages = [
 
     // Ofertas Laborales
     OfertasLaborales,
+
+    // Consejos
+    Consejos,
 
 
     // Cards
@@ -251,11 +259,11 @@ export const Pages = [
     // Popup Menu
     PopupMenuListPage,
     PopupMenuOnePage,
-]
+];
 
 export const Pipes = [
     TemperaturePipe, MomentPipe, OrderByPipe, CapitalizePipe, ShortenStringPipe
-]
+];
 
 export const Providers = [
     WeatherService,
@@ -272,17 +280,17 @@ export const Providers = [
     CardIO,
     StatusBar,
     SplashScreen,
-]
+];
 
 export const Components = [
     FlashCardComponent,
     TimerProgress,
     ExpandableHeader
-]
+];
 
 export const Directives = [
     SlidingDrawer,
     Timer,
     TypingEffect,
     Autosize,
-]
+];
