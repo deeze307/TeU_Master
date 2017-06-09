@@ -70,7 +70,7 @@ import { OfertasLaborales } from '../pages/ofertaslaborales/ofertaslaborales';
 
 // Consejos
 
-import { Consejos } from '../pages/consejos/pages';
+import { Consejos } from '../pages/consejos/consejos';
 
 // Slides
 import { SlidesPage } from '../pages/slide/slide';

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-declare const facebookConnectPlugin: any;
+
 
 
 @Component({
@@ -9,6 +9,8 @@ declare const facebookConnectPlugin: any;
 })
 export class HomePage {
   drawerOptions: any;
+
+
 
   public backgroundImage = "assets/img/background/BG_TeU.jpg";
   constructor(public navCtrl: NavController) {
@@ -19,7 +21,6 @@ export class HomePage {
       bounceBack: true
     };
 
-    console.log ("Logueo de Facebook");
     //facebookConnectPlugin.login(['email'], function(response) {
     //  alert('Logged in');
     //  alert(JSON.stringify(response.authResponse));

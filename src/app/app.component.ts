@@ -16,6 +16,8 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { Consejos } from '../pages/consejos/consejos';
+
 import { HomePage } from '../pages/_home/home';
 
 import { Subject } from 'rxjs';
@@ -51,6 +53,7 @@ export class MyApp {
     this.pages = [
       { title: 'Inicio', component: HomePage, active: true, icon: 'home' },
       { title: 'Ofertas Laborales', component: OfertasLaborales, active: true, icon: 'home' },
+      { title: 'Consejos',component: Consejos,active:true,icon:'home'},
       //{ title: 'Ionic Official Components', component: IonicOfficialComponentsPage, active: false, icon: 'alarm' },
       { title: 'Contacto', component: ContactPage, active: false, icon: 'archive' },
       //{ title: 'Acerca de', component: AboutPage, active: false, icon: 'archive' },
