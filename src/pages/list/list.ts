@@ -1,8 +1,9 @@
-import { SlidingItemListPage } from './sliding-item/sliding-item';
-import { SettingsListPage } from './settings/settings';
+//import { SlidingItemListPage } from './sliding-item/sliding-item';
+//import { SettingsListPage } from './settings/settings';
 import { Component } from '@angular/core';
+import { Consejos } from '../consejos/consejos';
 
-import { NavController } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 
 @Component({
   selector: 'page-list',
@@ -10,23 +11,35 @@ import { NavController } from 'ionic-angular';
 })
 export class ListsPage {
   rootPage: any;
-  items: Array<{ title: string, page: any }>;
+  selectedItem:any;
+  items: Array<{ title: string, desc: string }>;
 
   constructor(public navCtrl: NavController) {
     this.rootPage = ListsPage;
     this.items = [
+      //{
+      //  title: 'Settings',
+      //  page: SettingsListPage
+      //},
+      //{
+      //  title: 'Sliding Item',
+      //  page: SlidingItemListPage
+      //},
       {
-        title: 'Settings',
-        page: SettingsListPage
+        title: 'Consejo 1',
+        desc: 'Desc 1'
       },
       {
-        title: 'Sliding Item',
-        page: SlidingItemListPage
+        title: 'Consejo 2',
+        desc: 'Desc 2'
       },
     ]
   }
 
   itemTapped(event, item) {
-    this.navCtrl.push(item.page);
+    console.log(item);
+    this.navCtrl.push(Consejos,{
+      item:item
+    });
   }
 }

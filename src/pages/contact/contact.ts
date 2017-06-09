@@ -7,7 +7,7 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage {
 
-  public backgroundImage = "assets/img/background/faro-dark.jpg";
+  public backgroundImage = "assets/img/background/BG_TeU_SIN_TEXTO.jpg";
 
   constructor(public navCtrl: NavController) {
 

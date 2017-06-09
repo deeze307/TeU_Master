@@ -71,6 +71,15 @@ import { OfertasLaborales } from '../pages/ofertaslaborales/ofertaslaborales';
 // Consejos
 
 import { Consejos } from '../pages/consejos/consejos';
+import { ConsejosDetalle } from '../pages/consejos/consejos-detalle';
+
+// Sorteos
+
+import { Sorteos } from '../pages/sorteos/sorteos';
+
+// Ofrecimientos
+
+import { Ofrecimientos } from '../pages/ofrecimientos/ofrecimientos';
 
 // Slides
 import { SlidesPage } from '../pages/slide/slide';
@@ -186,6 +195,10 @@ export const Pages = [
 
     // Consejos
     Consejos,
+    ConsejosDetalle,
+
+    // Sorteos
+    Sorteos,
 
 
     // Cards

@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar color="teuHeader1">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title> Consejos: <small>{{item.title}}</small></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+
+  <ion-card>
+    <ion-card-header text-wrap>
+      {{item.title}}
+    </ion-card-header>
+    <ion-card-content>
+      {{item.desc}}
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

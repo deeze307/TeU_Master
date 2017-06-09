@@ -2,17 +2,23 @@ import { Component } from '@angular/core';
 import { NavController} from 'ionic-angular';
 
 /**
- * Generated class for the Consejo3Page page.
+ * Generated class for the SorteosPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @Component({
-  selector: 'page-consejo3',
-  templateUrl: 'consejo3.html',
+  selector: 'page-sorteos',
+  templateUrl: 'sorteos.html',
 })
-export class Consejo3Page {
+export class Sorteos {
 
+  public backgroundImage = "assets/img/background/BG_TeU_SIN_TEXTO.jpg";
   constructor(public navCtrl: NavController) {
   }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad SorteosPage');
+  }
+
 }

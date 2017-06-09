@@ -29,7 +29,7 @@ export class OfertasLaborales {
     },];
 
   drawerOptions: any;
-  public backgroundImage = "assets/img/background/BG_TeU.jpg";
+  public backgroundImage = "assets/img/background/BG_TeU_SIN_TEXTO.jpg";
   constructor(public navCtrl: NavController) {
     this.drawerOptions = {
       handleHeight: 50,

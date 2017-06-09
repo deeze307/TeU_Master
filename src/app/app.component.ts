@@ -5,9 +5,8 @@
 import { AppState } from './app.global';
 //import { PopupModalsPage } from '../pages/popup-modal/popup-modal';
 //import { ListsPage } from '../pages/list/list';
-import { ContactPage } from '../pages/contact/contact';
 //import { AboutPage } from '../pages/about/about';
-import { OfertasLaborales } from '../pages/ofertaslaborales/ofertaslaborales';
+
 //import { PopupMenuListPage } from '../pages/popup-menu/popup-menu';
 //import { MiscellaneousListPage } from '../pages/miscellaneous/miscellaneous';
 //import { ProfileListPage } from '../pages/profile/profile';
@@ -16,9 +15,11 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { Consejos } from '../pages/consejos/consejos';
-
 import { HomePage } from '../pages/_home/home';
+import { OfertasLaborales } from '../pages/ofertaslaborales/ofertaslaborales';
+import { Consejos } from '../pages/consejos/consejos';
+import { ContactPage } from '../pages/contact/contact';
+import { Sorteos} from '../pages/sorteos/sorteos';
 
 import { Subject } from 'rxjs';
 
@@ -52,10 +53,11 @@ export class MyApp {
 
     this.pages = [
       { title: 'Inicio', component: HomePage, active: true, icon: 'home' },
-      { title: 'Ofertas Laborales', component: OfertasLaborales, active: true, icon: 'home' },
-      { title: 'Consejos',component: Consejos,active:true,icon:'home'},
-      //{ title: 'Ionic Official Components', component: IonicOfficialComponentsPage, active: false, icon: 'alarm' },
+      { title: 'Ofertas Laborales', component: OfertasLaborales, active: false, icon: 'home' },
+      { title: 'Consejos',component: Consejos,active:false,icon:'home'},
       { title: 'Contacto', component: ContactPage, active: false, icon: 'archive' },
+      { title: 'Sorteos', component: Sorteos, active: false, icon: 'archive' },
+      //{ title: 'Ionic Official Components', component: IonicOfficialComponentsPage, active: false, icon: 'alarm' },
       //{ title: 'Acerca de', component: AboutPage, active: false, icon: 'archive' },
       //{ title: 'Login', component: LoginListPage, active: false, icon: 'archive' },
       //{ title: 'Lists', component: ListsPage, active: false, icon: 'body' },
@@ -63,9 +65,6 @@ export class MyApp {
       //{ title: 'Miscellaneous', component: MiscellaneousListPage, active: false, icon: 'bookmarks' },
       //{ title: 'Popup Menu', component: PopupMenuListPage, active: false, icon: 'beer' },
       //{ title: 'Profile', component: ProfileListPage, active: false, icon: 'camera' },
-      //{ title: 'Side Menu', component: SideMenuPage, active: false, icon: 'bookmark' },
-      // Removed for now as there were breaking changes in slides
-      //{ title: 'Theming', component: ThemingPage, active: false, icon: 'power' },
     ];
 
     this.activePage.subscribe((selectedPage: any) => {
