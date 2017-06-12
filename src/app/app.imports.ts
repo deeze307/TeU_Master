@@ -200,6 +200,9 @@ export const Pages = [
     // Sorteos
     Sorteos,
 
+    // Ofrecimientos
+    Ofrecimientos,
+
 
     // Cards
     CardListPage,
