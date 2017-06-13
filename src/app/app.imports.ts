@@ -121,6 +121,7 @@ import { WeatherService } from '../pages/miscellaneous/weather/weather.service';
 import { ToastService } from '../providers/util/toast.service';
 import { AlertService } from '../providers/util/alert.service';
 import { CameraProvider } from '../providers/util/camera.provider';
+import { TeuServiceProvider } from '../providers/teu-service/teu-service';
 
 // Ionic native providers
 import { CardIO } from '@ionic-native/card-io';
@@ -287,6 +288,7 @@ export const Providers = [
     ToastService,
     AppState,
     CameraProvider,
+    TeuServiceProvider,
 
     // Ionic native specific providers
     BarcodeScanner,
