@@ -10,16 +10,22 @@
 </ion-header>
 
 
-<ion-content padding class="transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+<ion-content padding class="transparent-header card-background-page" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
 
   <ion-card>
-    <ion-card-header text-wrap>
-      {{item.title}}
-    </ion-card-header>
-    <ion-card-content>
-      {{item.desc}}
-    </ion-card-content>
+      <img src="{{backgroundCard}}"/>
+      <div class="card-title">
+          {{item.title}}
+      </div>
+      <div class="card-subtitle">
+          {{item.desc}}
+      </div>
+    <!--<ion-card-header text-wrap>-->
+      <!--{{item.title}}-->
+    <!--</ion-card-header>-->
+    <!--<ion-card-content>-->
+      <!--{{item.desc}}-->
+    <!--</ion-card-content>-->
 
   </ion-card>
-
 </ion-content>
