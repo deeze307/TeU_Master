@@ -11,24 +11,40 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class TeuServiceProvider {
     ping:any;
+    tips:any;
 
   constructor(public http: Http) {
     console.log('Hello TeuServiceProvider Provider');
   }
 
-  testPing(){
-      return new Promise(resolve =>{
-          this.http.get('http://107.170.12.42/teu_laravel/public/teu/ping').map(res => res.json())
-              .subscribe(
-                  data => {
-                      this.ping = data;
-                      resolve(this.ping);
-                  },
-                  err => {
-                      console.log("Oops!");
-                  }
-              );
-    });
-  }
+    testPing(){
+        return new Promise(resolve =>{
+            this.http.get('http://107.170.12.42/teu_laravel/public/teu/ping').map(res => res.json())
+                .subscribe(
+                    data => {
+                        this.ping = data;
+                        resolve(this.ping);
+                    },
+                    err => {
+                        console.log("Oops!");
+                    }
+                );
+        });
+    }
+
+    getTips(){
+        return new Promise(resolve=>{
+            this.http.get('http://107.170.12.42/teu_laravel/public/teu/tips').map(res => res.json())
+                .subscribe(
+                    data =>{
+                        this.tips = data;
+                        resolve(this.tips);
+                    },
+                    err => {
+                        console.log("Oops!");
+                    }
+                );
+        });
+    }
 
 }

@@ -4,7 +4,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title> Consejos: <small>{{item.title}}</small></ion-title>
+    <ion-title> Consejos: <small>{{item.consejo_titulo}}</small></ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,10 +15,10 @@
   <ion-card>
       <img src="{{backgroundCard}}"/>
       <div class="card-title">
-          {{item.title}}
+          {{item.consejo_titulo}}
       </div>
       <div class="card-subtitle">
-          {{item.desc}}
+          {{item.consejo_desc}}
       </div>
     <!--<ion-card-header text-wrap>-->
       <!--{{item.title}}-->
