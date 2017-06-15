@@ -6,38 +6,19 @@
     <ion-title ion-text color="danger">Ofertas Laborales</ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding class="card-background-page" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+<ion-content class="card-background-page" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
   <ion-card *ngFor="let card of cards">
-      <img [src]="cardBG" (click)="cardTapped(card)" />
+      <img [src]="cardBG" (click)="cardTapped($event,card)" />
       <div class="card-title">
         {{card.titulo}}
       </div>
       <div class="card-subtitle">
-        {{card.descripcion}}
+        {{card.created_at}}
       </div>
   </ion-card>
-    <!--<ion-row no-padding>-->
-      <!--<ion-col>-->
-        <!--&lt;!&ndash;<button ion-button clear small color="danger" icon-left (click)="favorite(card)">&ndash;&gt;-->
-          <!--&lt;!&ndash;<ion-icon name='time'></ion-icon>&ndash;&gt;-->
-          <!--&lt;!&ndash;Favorite&ndash;&gt;-->
-        <!--&lt;!&ndash;</button>&ndash;&gt;-->
-        <!--<ion-fab right bottom>-->
-          <!--<button ion-fab color="light"><ion-icon name="share-alt"></ion-icon></button>-->
-          <!--<ion-fab-list side="left">-->
-            <!--<button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>-->
-            <!--<button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>-->
-            <!--<button ion-fab><ion-icon name="mail"></ion-icon></button>-->
-          <!--</ion-fab-list>-->
-        <!--</ion-fab>-->
-      <!--</ion-col>-->
-      <!--&lt;!&ndash;<ion-col text-right>&ndash;&gt;-->
-        <!--&lt;!&ndash;<button ion-button clear small color="info" icon-left (click)="share(card)">&ndash;&gt;-->
-          <!--&lt;!&ndash;<ion-icon name='share-alt'></ion-icon>&ndash;&gt;-->
-          <!--&lt;!&ndash;Compartir&ndash;&gt;-->
-        <!--&lt;!&ndash;</button>&ndash;&gt;-->
-      <!--&lt;!&ndash;</ion-col>&ndash;&gt;-->
-    <!--</ion-row>-->
+
+
+
 
 </ion-content>
 

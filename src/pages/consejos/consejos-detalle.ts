@@ -14,4 +14,6 @@ export class ConsejosDetalle {
   constructor(params: NavParams) {
     this.item = params.data.item;
   }
+
+
 }

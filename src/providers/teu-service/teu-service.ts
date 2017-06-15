@@ -15,7 +15,6 @@ export class TeuServiceProvider {
     jobs:any;
 
   constructor(public http: Http) {
-    console.log('Hello TeuServiceProvider Provider');
   }
 
     testPing(){

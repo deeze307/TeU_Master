@@ -57,14 +57,6 @@ export class MyApp {
       { title: 'Consejos',component: Consejos,active:false,icon:'home'},
       { title: 'Contacto', component: ContactPage, active: false, icon: 'archive' },
       { title: 'Sorteos', component: Sorteos, active: false, icon: 'archive' },
-      //{ title: 'Ionic Official Components', component: IonicOfficialComponentsPage, active: false, icon: 'alarm' },
-      //{ title: 'Acerca de', component: AboutPage, active: false, icon: 'archive' },
-      //{ title: 'Login', component: LoginListPage, active: false, icon: 'archive' },
-      //{ title: 'Lists', component: ListsPage, active: false, icon: 'body' },
-      //{ title: 'Popup Modal', component: PopupModalsPage, active: false, icon: 'basket' },
-      //{ title: 'Miscellaneous', component: MiscellaneousListPage, active: false, icon: 'bookmarks' },
-      //{ title: 'Popup Menu', component: PopupMenuListPage, active: false, icon: 'beer' },
-      //{ title: 'Profile', component: ProfileListPage, active: false, icon: 'camera' },
     ];
 
     this.activePage.subscribe((selectedPage: any) => {

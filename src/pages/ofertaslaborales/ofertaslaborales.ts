@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {TeuServiceProvider} from "../../providers/teu-service/teu-service";
+import {OfertasLaboralesDetalle} from "../ofertaslaborales/ofertaslaborales-detalle";
+import {LoadingController} from "ionic-angular/index";
+
 
 @Component({
   selector: 'page-ofertaslaborales',
@@ -8,56 +11,47 @@ import {TeuServiceProvider} from "../../providers/teu-service/teu-service";
   providers: [TeuServiceProvider]
 })
 export class OfertasLaborales {
-  cards : any;
-  //cards = [
-  //  {
-  //    imageUrl: 'assets/img/card/TeU2.jpg',
-  //    title: '#EmpleosTeU',
-  //    description: 'Administrativo Contable'
-  //  },
-  //  {
-  //    imageUrl: 'assets/img/card/TeU3.jpg',
-  //    title: '#EmpleosTeU',
-  //    description: 'Profesor de Inglés'
-  //  },
-  //  {
-  //    imageUrl: 'assets/img/card/TeU4.jpg',
-  //    title: '#EmpleosTeU',
-  //    description: 'Vendedor / Distribuidor'
-  //  },
-  //  {
-  //    imageUrl: 'assets/img/card/TeU5.jpg',
-  //    title: '#EmpleosTeU',
-  //    description: 'Secretaria Administrativa'
-  //  },];
+    loading: any;
+    cards : any;
+    rootPage: any;
+    drawerOptions: any;
+    public backgroundImage = "assets/img/background/BG_TeU_SIN_TEXTO.jpg";
+    public cardBG = "assets/img/card/teuBGSquare.jpg";
 
-  drawerOptions: any;
-  public backgroundImage = "assets/img/background/BG_TeU_SIN_TEXTO.jpg";
-  public cardBG = "assets/img/card/teuBGSquare.jpg";
-
-  constructor(public navCtrl: NavController,public teuServiceProvider: TeuServiceProvider) {
-    this.drawerOptions = {
-      handleHeight: 50,
-      thresholdFromBottom: 200,
-      thresholdFromTop: 200,
-      bounceBack: true
-    };
-    this.enabledJobs();
+  constructor(public navCtrl: NavController,public teuServiceProvider: TeuServiceProvider, public loadingCtrl: LoadingController) {
+      this.rootPage = OfertasLaborales;
+      this.drawerOptions = {
+          handleHeight: 50,
+          thresholdFromBottom: 200,
+          thresholdFromTop: 200,
+          bounceBack: true
+      };
+      this.presentLoading();
+      this.enabledJobs();
   }
+
+    presentLoading() {
+        this.loading = this.loadingCtrl.create({
+            content: 'Cargando...',
+            duration: 10000
+        });
+        this.loading.present();
+    }
 
   enabledJobs(){
     this.teuServiceProvider.getAllEnabledJobs().then(data=>{
       this.cards = data;
-      console.log(this.cards);
-      //this.loading.dismiss();
+        this.loading.dismiss();
     })
   }
 
   ionViewDidLoad() {
   }
 
-  cardTapped(card) {
-    alert(card.title + " was tapped.");
+  cardTapped(event, card) {
+    this.navCtrl.push(OfertasLaboralesDetalle,{
+      item:card
+    });
   }
 
   share(card) {
