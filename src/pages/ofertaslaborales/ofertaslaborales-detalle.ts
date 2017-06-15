@@ -3,9 +3,9 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-ofertaslaborales',
-  templateUrl: 'ofertaslaborales.html'
+  templateUrl: 'ofertaslaborales-detalle.html'
 })
-export class OfertasLaborales {
+export class OfertasLaboralesDetalle {
   cards = [
     {
       imageUrl: 'assets/img/card/TeU2.jpg',

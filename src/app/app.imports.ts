@@ -67,6 +67,7 @@ import { AboutPage } from '../pages/about/about';
 // Ofertas Laborales
 
 import { OfertasLaborales } from '../pages/ofertaslaborales/ofertaslaborales';
+import { OfertasLaboralesDetalle} from '../pages/ofertaslaborales/ofertaslaborales-detalle';
 
 // Consejos
 
@@ -193,6 +194,7 @@ export const Pages = [
 
     // Ofertas Laborales
     OfertasLaborales,
+    OfertasLaboralesDetalle,
 
     // Consejos
     Consejos,
