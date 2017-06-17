@@ -14,8 +14,10 @@
 
     <ion-card>
         <img src="{{backgroundCard}}"/>
-        <div class="card-detail">
-            {{item.descripcion}}
+        <div class="card-detail" style="white-space: pre-line;">
+            <ion-item *ngFor="let id of item.descripcion">
+                {{id}}
+            </ion-item>
             <hr>
                 <u>Telefono de Contacto:</u> {{item.movil}}<br>
                 <u>Email:</u> {{item.email}}

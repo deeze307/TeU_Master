@@ -46,6 +46,10 @@
   border-radius: 50%;
 }
 
+.salto-linea {
+  white-space: pre-line;
+}
+
 .transparent-header {
   // This is just to make the header transparent and button/icon with white color
   .toolbar-content,
