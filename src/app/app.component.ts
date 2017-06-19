@@ -40,15 +40,15 @@ export class MyApp {
     this.initializeApp();
     this.rightMenuItems = [
       { icon: 'home', active: true },
-      { icon: 'alarm', active: false },
-      { icon: 'analytics', active: false },
-      { icon: 'archive', active: false },
-      { icon: 'basket', active: false },
-      { icon: 'body', active: false },
-      { icon: 'bookmarks', active: false },
-      { icon: 'camera', active: false },
-      { icon: 'beer', active: false },
-      { icon: 'power', active: false },
+      //{ icon: 'alarm', active: false },
+      //{ icon: 'analytics', active: false },
+      //{ icon: 'archive', active: false },
+      //{ icon: 'basket', active: false },
+      //{ icon: 'body', active: false },
+      //{ icon: 'bookmarks', active: false },
+      //{ icon: 'camera', active: false },
+      //{ icon: 'beer', active: false },
+      //{ icon: 'power', active: false },
     ];
 
     this.pages = [
