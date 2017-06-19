@@ -5,7 +5,7 @@
 import { AppState } from './app.global';
 //import { PopupModalsPage } from '../pages/popup-modal/popup-modal';
 //import { ListsPage } from '../pages/list/list';
-//import { AboutPage } from '../pages/about/about';
+import { AboutPage } from '../pages/about/about';
 
 //import { PopupMenuListPage } from '../pages/popup-menu/popup-menu';
 //import { MiscellaneousListPage } from '../pages/miscellaneous/miscellaneous';
@@ -57,6 +57,7 @@ export class MyApp {
       { title: 'Consejos',component: Consejos,active:false,icon:'home'},
       { title: 'Contacto', component: ContactPage, active: false, icon: 'archive' },
       { title: 'Sorteos', component: Sorteos, active: false, icon: 'archive' },
+      { title: 'Staff', component: AboutPage, active: false, icon: 'archive' },
     ];
 
     this.activePage.subscribe((selectedPage: any) => {

@@ -19,7 +19,7 @@ export class TeuServiceProvider {
 
     testPing(){
         return new Promise(resolve =>{
-            this.http.get('http://107.170.12.42/teu_laravel/public/teu/ping').map(res => res.json())
+            this.http.get('http://107.170.12.42/teu_laravel/public/ping').map(res => res.json())
                 .subscribe(
                     data => {
                         this.ping = data;
@@ -34,7 +34,7 @@ export class TeuServiceProvider {
 
     getTips(){
         return new Promise(resolve=>{
-            this.http.get('http://107.170.12.42/teu_laravel/public/teu/tips').map(res => res.json())
+            this.http.get('http://107.170.12.42/teu_laravel/public/tips').map(res => res.json())
                 .subscribe(
                     data =>{
                         this.tips = data;
@@ -49,7 +49,7 @@ export class TeuServiceProvider {
 
     getAllEnabledJobs(){
         return new Promise(resolve=>{
-            this.http.get('http://107.170.12.42/teu_laravel/public/teu/enabledjobs').map(res=>res.json())
+            this.http.get('http://107.170.12.42/teu_laravel/public/enabledjobs').map(res=>res.json())
                 .subscribe(
                     data =>{
                         this.jobs = data;

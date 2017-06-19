@@ -3,17 +3,35 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Acerca de</ion-title>
+    <ion-title>Staff TeU</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  Somos un equipo que se dedica a darles herramientas a las personas para poder conseguir trabajo
+<ion-content padding class="transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
+  <ion-label text-wrap text-center color="teuHeader3">
+      Somos un equipo que se dedica a darles herramientas a la comunidad para poder conseguir empleo.
+  </ion-label>
+  <br>
+    <br>
+      <!--<ion-item-divider color="teuHeader1">-->
+          <!--Integrantes del <strong>Staff</strong>:-->
+      <!--</ion-item-divider>-->
+    <ion-card class="staff">
+        <div class="card-title staff_title">
+            <u>Integrantes del <strong>Staff</strong>:</u>
+            <br>
+        </div>
+        <div class="card-detail">
+            <strong><aside class="staff_detail">• Esteban (Administrador - Fundador del sitio)</aside></strong><br>
+            <hr>
+            <strong><aside class="staff_detail">• Diego (Administrador - Desarrollador)</aside></strong><br>
+            Diego se dedica al desarrollo y diseño de páginas web y aplicaciónes de escritorio (Windows) y aplicaciónes para móviles.<br>
+            Se sumó al equipo en Junio de 2017 apostando al desarrollo e innovación de TeU.<br>
+            <u>Teléfono de Contacto:</u> (2901)15505260<br>
+            <u>Email de Contacto:</u> deeze.designs@gmail.com<br>
+            <hr>
+        </div>
+    </ion-card>
 
-  Integrantes del <strong>Staff</strong>:
-  - Esteban (Fundador del sitio)
-  - Diego (Desarrollador)
-  -
-  -
 
 </ion-content>

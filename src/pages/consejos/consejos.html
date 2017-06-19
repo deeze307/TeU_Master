@@ -7,9 +7,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding class="transparent-header" [ngStyle]="{'background-image': 'url(' + backgroundImage +')'}">
-  <ion-chip>
     <ion-label text-wrap text-center color="teuHeader3">Consejos para aumentar tus posibilidades en una entrevista laboral</ion-label>
-  </ion-chip>
   <ion-card>
       <ion-list inset>
         <button ion-item text-wrap *ngFor="let item of items" (click)="itemTapped($event, item)">

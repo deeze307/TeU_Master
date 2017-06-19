@@ -13,4 +13,8 @@ export class ContactPage {
 
   }
 
+itemTapped(url){
+  window.open(url, "_system");
+}
+
 }
