@@ -4,6 +4,7 @@ import { Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {TeuServiceProvider} from "../../providers/teu-service/teu-service";
 import {LoadingController} from "ionic-angular/index";
+import {Push,PushToken} from '@ionic/cloud-angular';
 
 
 
@@ -18,25 +19,30 @@ export class HomePage {
     loading: any;
 
   public backgroundImage = "assets/img/background/BG_TeU.jpg";
-  constructor(public navCtrl: NavController, private http:Http, public teuServiceProvider: TeuServiceProvider, public loadingCtrl: LoadingController) {
+  constructor(public navCtrl: NavController, private http:Http, public teuServiceProvider: TeuServiceProvider, public loadingCtrl: LoadingController, public push:Push) {
     this.drawerOptions = {
       handleHeight: 50,
       thresholdFromBottom: 200,
       thresholdFromTop: 200,
       bounceBack: true
     };
-      //this.presentLoading();
-  }
 
-  ionViewDidLoad() {
-  }
-
-  presentLoading() {
-      this.loading = this.loadingCtrl.create({
-        content: 'Cargando...',
-        duration: 10000,
-        dismissOnPageChange: true
+    //Registro el dispositivo para poder recibir notificaciones
+    try{
+      this.push.register().then((t:PushToken) => {
+        return this.push.saveToken(t);
+      }).then((t:PushToken) => {
+        console.log('Token saved:', t.token);
       });
-      this.loading.present();
+
+      this.push.rx.notification()
+          .subscribe((msg) => {
+            alert(msg.title + ': ' + msg.text);
+          });
+    }catch(ex){
+
+    }
   }
+
+
 }

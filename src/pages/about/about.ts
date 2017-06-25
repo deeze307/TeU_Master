@@ -29,20 +29,8 @@ export class AboutPage {
 
   getStaff(){
       this.teuServiceProvider.getStaff().then(dataObject=>{
-          this.staff=[];
-          for(var data in dataObject){
-              this.preStaff = [{
-                  nombre: dataObject[data].nombre,
-                  apellido: dataObject[data].apellido,
-                  telefono: dataObject[data].telefono,
-                  email: dataObject[data].email,
-                  id_rol: dataObject[data].id_rol,
-                  descripcion: dataObject[data].descripcion,
-              }];
-              this.staff.push(this.preStaff);
-          };
+          this.staff=dataObject;
           console.log(this.staff);
-
           this.loading.dismiss();
       })
   }

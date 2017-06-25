@@ -20,8 +20,8 @@
         </div>
         <div class="card-detail">
             <div *ngFor="let p of staff">
-                <aside class="staff_names"><strong>• {{p[0].nombre}} {{p[0].apellido}}</strong> ({{p[0].id_rol}})</aside><br>
-                {{p[0].descripcion}}<br>
+                <aside class="staff_names"><strong>• {{p.nombre}} {{p.apellido}}</strong> ({{p.id_rol}})</aside><br>
+                <div [innerHTML]="p.descripcion"><br></div>
                 <hr>
             </div>
         </div>

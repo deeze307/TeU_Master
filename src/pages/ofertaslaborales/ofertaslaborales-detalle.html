@@ -4,7 +4,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title> Detalle de: <small>{{item[0].titulo}}</small></ion-title>
+    <ion-title><small>{{item.item.titulo}}</small></ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,26 +15,10 @@
     <ion-card >
         <img src="{{backgroundCard}}"/>
         <div class="card-detail">
-            <div *ngFor="let id of item[0].descripcion">
-                {{id}}
-            </div>
+            <div [innerHTML]="item.item.descripcion"></div>
             <hr>
-                <u>Telefono de Contacto:</u> {{item[0].movil}}<br>
-                <u>Email:</u> {{item[0].email}}
+                <u>Telefono de Contacto:</u> {{item.item.movil}}<br>
+                <u>Email:</u> {{item.item.email}}
         </div>
-
-      <!-- Para siguiente actualización la opción de compartir -->
-    <!--<ion-row no-padding>-->
-        <!--<ion-col>-->
-            <!--<ion-fab left bottom>-->
-                <!--<button ion-fab color="light"><ion-icon name="share-alt"></ion-icon></button>-->
-                <!--<ion-fab-list side="right">-->
-                    <!--<button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>-->
-                    <!--<button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>-->
-                    <!--<button ion-fab><ion-icon name="mail"></ion-icon></button>-->
-                <!--</ion-fab-list>-->
-            <!--</ion-fab>-->
-        <!--</ion-col>-->
-    <!--</ion-row>-->
     </ion-card>
 </ion-content>

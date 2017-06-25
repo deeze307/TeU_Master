@@ -26,6 +26,7 @@
         "@ionic-native/geolocation": "^3.4.4",
         "@ionic-native/splash-screen": "3.4.2",
         "@ionic-native/status-bar": "3.4.2",
+        "@ionic/cloud-angular": "^0.12.0",
         "@ionic/storage": "2.0.1",
         "angular2-swing": "^0.10.0",
         "card.io.cordova.mobilesdk": "git+https://github.com/card-io/card.io-Cordova-Plugin.git",
@@ -47,6 +48,7 @@
         "ionicons": "3.0.0",
         "moment": "^2.15.2",
         "phonegap-plugin-barcodescanner": "^6.0.6",
+        "phonegap-plugin-push": "^1.10.5",
         "rxjs": "5.1.1",
         "sw-toolbox": "3.4.0",
         "zone.js": "^0.8.4"
@@ -94,7 +96,11 @@
             "cordova-plugin-facebook4": {
                 "APP_ID": "'138422920040054'",
                 "APP_NAME": "'TeU'"
-            }
+            },
+            "variables": {
+                "SENDER_ID": "410950190174"
+            },
+            "locator": "phonegap-plugin-push"
         }
     }
 }
