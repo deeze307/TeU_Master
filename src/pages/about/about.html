@@ -13,33 +13,17 @@
   </ion-label>
   <br>
     <br>
-      <!--<ion-item-divider color="teuHeader1">-->
-          <!--Integrantes del <strong>Staff</strong>:-->
-      <!--</ion-item-divider>-->
     <ion-card class="staff">
         <div class="card-title staff_title">
             <u>Integrantes del <strong>Staff</strong>:</u>
             <br>
         </div>
         <div class="card-detail">
-            <aside class="staff_names"><strong>• Esteban Rubén Pérez</strong> (Administrador)</aside><br>
-            Esteban es el fundador de TeU.<br>
-            Actualmente se destaca en la profesión de Empleado de Comercio.<br>
-            <u>Email de Contacto:</u> djsesteban@gmail.com<br>
-            <hr>
-            <aside class="staff_names"><strong>• Elisa Sena</strong> (Administrador)</aside><br>
-            Elisa es Cosmiatra y Maquilladora.<br>
-            Se sumó para colaborar con el equipo en Junio del 2015.<br>
-            <u>Email de Contacto:</u> Elisamia_268@hotmail.com<br>
-            <hr>
-            <aside class="staff_names"><strong>• Diego Maidana</strong> (Administrador - Desarrollador)</aside><br>
-            Diego se dedica al desarrollo y diseño de páginas web y aplicaciónes de escritorio (Windows) y aplicaciónes para móviles.<br>
-            Se sumó al equipo en Junio de 2017 apostando al desarrollo e innovación de TeU.<br>
-            <u>Teléfono de Contacto:</u> (2901)15505260<br>
-            <u>Email de Contacto:</u> deeze.designs@gmail.com<br>
-            <hr>
+            <div *ngFor="let p of staff">
+                <aside class="staff_names"><strong>• {{p.nombre}} {{p.apellido}}</strong> ({{p.id_rol}})</aside><br>
+                <div [innerHTML]="p.descripcion"><br></div>
+                <hr>
+            </div>
         </div>
     </ion-card>
-
-
 </ion-content>

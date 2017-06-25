@@ -62,4 +62,19 @@ export class TeuServiceProvider {
         });
     }
 
+    getStaff(){
+        return new Promise(resolve=>{
+            this.http.get('http://107.170.12.42/teu_laravel/public/staff').map(res=>res.json())
+                .subscribe(
+                    data =>{
+                        this.jobs = data;
+                        resolve(this.jobs);
+                    },
+                    err=>{
+                        console.log("No se pudieron obtener los Datos del Staff");
+                    }
+                );
+        });
+    }
+
 }
