@@ -21,6 +21,8 @@ import { Consejos } from '../pages/consejos/consejos';
 import { ContactPage } from '../pages/contact/contact';
 import { Sorteos} from '../pages/sorteos/sorteos';
 
+import {Push,PushToken} from '@ionic/cloud-angular';
+
 import { Subject } from 'rxjs';
 
 @Component({
@@ -36,10 +38,10 @@ export class MyApp {
   rightMenuItems: Array<{ icon: string, active: boolean }>;
   state: any;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashscreen: SplashScreen, public global: AppState) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashscreen: SplashScreen, public global: AppState, public push:Push) {
     this.initializeApp();
     this.rightMenuItems = [
-      { icon: 'home', active: true },
+      //{ icon: 'home', active: true },
       //{ icon: 'alarm', active: false },
       //{ icon: 'analytics', active: false },
       //{ icon: 'archive', active: false },
@@ -65,7 +67,29 @@ export class MyApp {
         page.active = page.title === selectedPage.title;
       });
     });
+
+      this.registerToken();
+      this.getNotifications();
   }
+
+    //**** Notificaciones ****//
+    private registerToken(){
+        this.push.register().then((t: PushToken) => {
+            return this.push.saveToken(t,{
+                ignore_user: true
+            });
+        }).then((t: PushToken) => {
+            console.log('Token saved:', t.token);
+        });
+    }
+
+    private getNotifications(){
+        this.push.rx.notification()
+            .subscribe((msg) => {
+                alert(msg.title + ': ' + msg.text);
+            });
+    }
+    //************************//
 
   initializeApp() {
     this.platform.ready().then(() => {

@@ -4,18 +4,19 @@ import { CloudSettings,CloudModule} from '@ionic/cloud-angular';
 import { MyApp } from './app.component';
 
 const cloudSettings: CloudSettings = {
-    'core': {
-        'app_id':'47f29374'
+    core: {
+        app_id:'47f29374'
     },
-    'push': {
-        'sender_id':'410950190174',
-        'pluginConfig':{
-            'ios':{
+    push: {
+        sender_id:'410950190174',
+        pluginConfig:{
+            ios:{
                 'badge':true,
                 'sound':true
             },
-            'android':{
-                'iconColor':'#343434'
+            android:{
+                iconColor:'#343434',
+                forceShow:true
             }
         }
     }
