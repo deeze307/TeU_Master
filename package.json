@@ -87,5 +87,15 @@
             "SENDER_ID": "410950190174"
         },
         "locator": "phonegap-plugin-push"
+            "ionic-plugin-keyboard": {},
+            "phonegap-plugin-barcodescanner": {
+                "CAMERA_USAGE_DESCRIPTION": " "
+            }
+            },
+            "variables": {
+                "SENDER_ID": "410950190174"
+            },
+            "locator": "phonegap-plugin-push"
+        }
     }
 }
