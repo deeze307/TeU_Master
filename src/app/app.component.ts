@@ -3,15 +3,10 @@
 //import { LoginListPage } from '../pages/login/login';
 //import { ThemingPage } from '../pages/theming/theming';
 import { AppState } from './app.global';
-//import { PopupModalsPage } from '../pages/popup-modal/popup-modal';
-//import { ListsPage } from '../pages/list/list';
 import { AboutPage } from '../pages/about/about';
 
-//import { PopupMenuListPage } from '../pages/popup-menu/popup-menu';
-//import { MiscellaneousListPage } from '../pages/miscellaneous/miscellaneous';
-//import { ProfileListPage } from '../pages/profile/profile';
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform} from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
@@ -24,9 +19,10 @@ import { Sorteos} from '../pages/sorteos/sorteos';
 import {Push,PushToken} from '@ionic/cloud-angular';
 
 import { Subject } from 'rxjs';
+import {App} from "ionic-angular/index";
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
@@ -38,7 +34,7 @@ export class MyApp {
   rightMenuItems: Array<{ icon: string, active: boolean }>;
   state: any;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashscreen: SplashScreen, public global: AppState, public push:Push) {
+  constructor(public app:App,public platform: Platform, public statusBar: StatusBar, public splashscreen: SplashScreen, public global: AppState, public push:Push) {
     this.initializeApp();
     this.rightMenuItems = [
       //{ icon: 'home', active: true },
@@ -98,6 +94,30 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashscreen.hide();
+
+      //Registration of push in Android and Windows Phone
+      this.platform.registerBackButtonAction(() => {
+        let nav = this.app.getActiveNav();
+        let view = this.nav.getActive();
+        if (nav.canGoBack()){ //Can we go back?
+          nav.pop();
+        }else if (view.component.name != 'HomePage' ){ //Si no estamos en la pagina ppal
+          this.nav.setRoot(this.rootPage);
+        }
+        else{
+          //this.platform.exitApp(); //Exit from app
+          return navigatior['app'].exitApp();
+        }
+      });
+      //this.platform.registerBackButtonAction(() => {
+      //  //returns view controller obj
+      //  let view = this.nav.getActive();
+      //  //prints out component name as string
+      //  if (view.component.name == 'HomePage')
+      //  {this.platform.exitApp();}
+      //  else if (view.component.name == 'OfertasLaborales' || view.component.name == 'Consejos' || view.component.name == 'ContactPage' || view.component.name == 'Sorteos' || view.component.name == 'Staff')
+      //  {this.nav.setRoot(this.rootPage);}
+      //});
     });
   }
 

@@ -3,6 +3,7 @@ import { NavController} from 'ionic-angular';
 import { ConsejosDetalle } from '../consejos/consejos-detalle';
 import {LoadingController} from "ionic-angular/index";
 import {TeuServiceProvider} from "../../providers/teu-service/teu-service";
+import {HomePage} from "../_home/home";
 
 @Component({
   selector: 'page-consejos',
@@ -18,7 +19,7 @@ export class Consejos {
   public backgroundImage = "assets/img/background/BG_TeU_SIN_TEXTO.jpg";
 
   constructor(public navCtrl: NavController,public teuServiceProvider: TeuServiceProvider, public loadingCtrl: LoadingController) {
-    this.rootPage = Consejos;
+    this.rootPage = HomePage;
     this.presentLoading();
     this.getTips();
   }

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
 import {TeuServiceProvider} from "../../providers/teu-service/teu-service";
 import {OfertasLaboralesDetalle} from "../ofertaslaborales/ofertaslaborales-detalle";
 import {LoadingController} from "ionic-angular/index";
+import {HomePage} from "../_home/home";
 
 
 @Component({
@@ -19,7 +20,7 @@ export class OfertasLaborales {
     public cardBG = "assets/img/card/teuBGSquare.jpg";
 
   constructor(public navCtrl: NavController,public teuServiceProvider: TeuServiceProvider, public loadingCtrl: LoadingController) {
-      this.rootPage = OfertasLaborales;
+      this.rootPage = HomePage;
       this.drawerOptions = {
           handleHeight: 50,
           thresholdFromBottom: 200,

@@ -1,101 +1,95 @@
 {
-    "name": "ionic-hello-world",
-    "author": "Diego Maidana",
-    "homepage": "http://ionicframework.com/",
-    "private": true,
-    "scripts": {
-        "clean": "ionic-app-scripts clean",
-        "build": "ionic-app-scripts build",
-        "ionic:build": "ionic-app-scripts build",
-        "ionic:serve": "ionic-app-scripts serve"
-    },
-    "dependencies": {
-        "@angular/common": "4.0.0",
-        "@angular/compiler": "4.0.0",
-        "@angular/compiler-cli": "4.0.0",
-        "@angular/core": "4.0.0",
-        "@angular/forms": "4.0.0",
-        "@angular/http": "4.0.0",
-        "@angular/platform-browser": "4.0.0",
-        "@angular/platform-browser-dynamic": "4.0.0",
-        "@ionic-native/barcode-scanner": "^3.4.4",
-        "@ionic-native/camera": "^3.4.4",
-        "@ionic-native/card-io": "^3.4.4",
-        "@ionic-native/core": "^3.4.2",
-        "@ionic-native/diagnostic": "^3.4.4",
-        "@ionic-native/geolocation": "^3.4.4",
-        "@ionic-native/splash-screen": "3.4.2",
-        "@ionic-native/status-bar": "3.4.2",
-        "@ionic/cloud-angular": "^0.12.0",
-        "@ionic/storage": "2.0.1",
-        "angular2-swing": "^0.10.0",
-        "card.io.cordova.mobilesdk": "git+https://github.com/card-io/card.io-Cordova-Plugin.git",
-        "chart.js": "^2.4.0",
-        "cordova-android": "^6.2.3",
-        "cordova-ios": "^4.4.0",
-        "cordova-plugin-compat": "^1.1.0",
-        "cordova-plugin-device": "^1.1.4",
-        "cordova-plugin-geolocation": "^2.4.3",
-        "cordova-plugin-splashscreen": "^4.0.3",
-        "cordova-plugin-statusbar": "^2.2.1",
-        "cordova-plugin-whitelist": "^1.3.1",
-        "cordova.plugins.diagnostic": "^3.4.2",
-        "google": "^2.1.0",
-        "ionic-angular": "3.0.0",
-        "ionic-plugin-keyboard": "^2.2.1",
-        "ionicons": "3.0.0",
-        "moment": "^2.15.2",
-        "phonegap-plugin-push": "^1.10.5",
-        "rxjs": "5.1.1",
-        "sw-toolbox": "3.4.0",
-        "zone.js": "^0.8.4"
-    },
-    "devDependencies": {
-        "@ionic/app-scripts": "1.3.0",
-        "@ionic/cli-plugin-cordova": "1.4.0",
-        "@ionic/cli-plugin-ionic-angular": "1.3.1",
-        "typescript": "~2.2.1"
-    },
-    "cordovaPlugins": [
-        "cordova-plugin-whitelist",
-        "cordova-plugin-console",
-        "cordova-plugin-statusbar",
-        "cordova-plugin-device",
-        "cordova-plugin-splashscreen",
-        "ionic-plugin-keyboard"
+  "name": "ionic-hello-world",
+  "author": "Diego Maidana",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
+  },
+  "dependencies": {
+    "@angular/common": "4.0.0",
+    "@angular/compiler": "4.0.0",
+    "@angular/compiler-cli": "4.0.0",
+    "@angular/core": "4.0.0",
+    "@angular/forms": "4.0.0",
+    "@angular/http": "4.0.0",
+    "@angular/platform-browser": "4.0.0",
+    "@angular/platform-browser-dynamic": "4.0.0",
+    "@ionic-native/barcode-scanner": "^3.4.4",
+    "@ionic-native/camera": "^3.4.4",
+    "@ionic-native/card-io": "^3.4.4",
+    "@ionic-native/core": "^3.4.2",
+    "@ionic-native/diagnostic": "^3.4.4",
+    "@ionic-native/geolocation": "^3.4.4",
+    "@ionic-native/splash-screen": "3.4.2",
+    "@ionic-native/status-bar": "3.4.2",
+    "@ionic/cloud-angular": "^0.12.0",
+    "@ionic/storage": "2.0.1",
+    "angular2-swing": "^0.10.0",
+    "card.io.cordova.mobilesdk": "git+https://github.com/card-io/card.io-Cordova-Plugin.git",
+    "chart.js": "^2.4.0",
+    "cordova-android": "^6.2.3",
+    "cordova-ios": "^4.4.0",
+    "cordova-plugin-compat": "^1.1.0",
+    "cordova-plugin-console": "^1.0.5",
+    "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-splashscreen": "^4.0.3",
+    "cordova-plugin-statusbar": "^2.2.1",
+    "cordova-plugin-whitelist": "^1.3.1",
+    "google": "^2.1.0",
+    "ionic-angular": "3.0.0",
+    "ionic-plugin-keyboard": "^2.2.1",
+    "ionicons": "3.0.0",
+    "moment": "^2.15.2",
+    "phonegap-plugin-push": "^1.10.5",
+    "rxjs": "5.1.1",
+    "sw-toolbox": "3.4.0",
+    "zone.js": "^0.8.4"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "1.3.0",
+    "@ionic/cli-plugin-cordova": "1.5.0",
+    "@ionic/cli-plugin-ionic-angular": "1.4.0",
+    "typescript": "~2.2.1"
+  },
+  "cordovaPlugins": [
+    "cordova-plugin-whitelist",
+    "cordova-plugin-console",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-device",
+    "cordova-plugin-splashscreen",
+    "ionic-plugin-keyboard"
+  ],
+  "cordovaPlatforms": [],
+  "description": "Tu Portal de Empleo.",
+  "cordova": {
+    "platforms": [
+      "android",
+      "ios"
     ],
-    "cordovaPlatforms": [],
-    "description": "Tu Portal de Empleo.",
-    "cordova": {
-        "platforms": [
-            "android",
-            "ios"
-        ],
-        "plugins": {
-            "card.io.cordova.mobilesdk": {},
-            "cordova-plugin-device": {},
-            "cordova-plugin-geolocation": {
-                "GEOLOCATION_USAGE_DESCRIPTION": " "
-            },
-            "cordova-plugin-splashscreen": {},
-            "cordova-plugin-statusbar": {},
-            "cordova-plugin-whitelist": {},
-            "cordova.plugins.diagnostic": {},
-            "ionic-plugin-keyboard": {}
-        },
-        "variables": {
-            "SENDER_ID": "410950190174"
-        },
-        "locator": "phonegap-plugin-push"
-            "ionic-plugin-keyboard": {},
-            "phonegap-plugin-barcodescanner": {
-                "CAMERA_USAGE_DESCRIPTION": " "
-            }
-            },
-            "variables": {
-                "SENDER_ID": "410950190174"
-            },
-            "locator": "phonegap-plugin-push"
-        }
+    "plugins": {
+      "card.io.cordova.mobilesdk": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-whitelist": {},
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-console": {}
+    },
+    "variables": {
+      "SENDER_ID": "410950190174"
+    },
+    "locator": "phonegap-plugin-push",
+    "ionic-plugin-keyboard": {},
+    "phonegap-plugin-barcodescanner": {
+      "CAMERA_USAGE_DESCRIPTION": " "
     }
+  },
+  "variables": {
+    "SENDER_ID": "410950190174"
+  },
+  "locator": "phonegap-plugin-push"
 }
